@@ -33,10 +33,10 @@ export DATABASE_BASE=${DATABASE_BASE:-"${APROJECTS}/little_navmap_db"}
 export HELP_BASE=${HELP_BASE:-"${APROJECTS}/little_navmap_help"}
 
 # Defines the used Qt for all builds
-export QMAKE_SHARED=${QMAKE_SHARED:-"${HOME}/Qt/5.15.2/gcc_64/bin/qmake"}
+export QMAKE_SHARED=${QMAKE_SHARED:-"/usr/bin/qmake"}
 
 # Defines the used Qt for Xpconnect (/mnt/disk/build-qt-5.15.2-release/bin/qmake)
-export QMAKE_STATIC=${QMAKE_STATIC:-"${APROJECTS}/build-qt-5.15.2-release/bin/qmake"}
+export QMAKE_STATIC=${QMAKE_STATIC:-"/usr/bin/qmake"}
 
 # Do not change the DEPLOY_BASE since some scripts depend on it
 export DEPLOY_BASE="${APROJECTS}/deploy"
@@ -47,12 +47,12 @@ export DEPLOY_BASE="${APROJECTS}/deploy"
 
 # ===========================================================================
 # ========================== atools
-rm -rf ${APROJECTS}/build-atools-${CONF_TYPE}
-mkdir -p ${APROJECTS}/build-atools-${CONF_TYPE}
-cd ${APROJECTS}/build-atools-${CONF_TYPE}
+#rm -rf ${APROJECTS}/build-atools-${CONF_TYPE}
+#mkdir -p ${APROJECTS}/build-atools-${CONF_TYPE}
+#cd ${APROJECTS}/build-atools-${CONF_TYPE}
 
-${QMAKE_SHARED} ${APROJECTS}/atools/atools.pro -spec linux-g++ CONFIG+=${CONF_TYPE}
-make -j4
+#${QMAKE_SHARED} ${APROJECTS}/atools/atools.pro -spec linux-g++ CONFIG+=${CONF_TYPE}
+#make -j4
 
 # ===========================================================================
 # ========================== littlenavmap
